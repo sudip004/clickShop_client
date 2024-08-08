@@ -52,8 +52,13 @@ function App() {
         <Footer />
       </BrowserRouter>
 
+
+
     </div>
   );
 }
 
 export default App;
+
+
+// then fine
