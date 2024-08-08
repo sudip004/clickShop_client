@@ -1,0 +1,201 @@
+
+
+.drawerContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.69rem;
+    width: 35.75rem;
+    height: 57.5rem;
+    padding: 2.3125rem 3rem 3rem 3rem;
+    background: #ffffff;
+    top: 0;
+    right: 0;
+  }
+  .donate {
+    color: #252b42;
+  
+    font-family: Montserrat;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75rem; /* 77.778% */
+    letter-spacing: -0.045rem;
+  }
+  .drawerContainer > span {
+    background: #2859b6;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+  }
+  .clientContainer {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+  }
+  .nameBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 14.5625rem;
+    height: 4rem;
+  }
+  .nameBox > p {
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.375rem; /* 122.222% */
+    color: #252b42;
+  }
+  .nameBox > input {
+    width: 14.5625rem;
+    height: 2.875rem;
+    padding: 0.75rem 0rem 0.75rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.25rem;
+    background: #f9f9f9;
+    padding-left: 1rem;
+  }
+  .paywithContainer {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  .paywithContainer > p {
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 0.75rem; /* 66.667% */
+    color: #252b42;
+  }
+  .paywithContainer > div {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.45rem;
+  }
+  .paywithContainer > div > label {
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.375rem;
+    color: #252b42;
+  }
+  .paywithContainer > div > input[type="radio"]{
+    width: 0.9375rem;
+  height: 0.9375rem;
+  }
+  
+  .AmountContainer {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  .AmountContainer > p {
+    color: #252b42;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.375rem; /* 122.222% */
+  }
+  .AmountContainer > input {
+    width: 100%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 1rem;
+    background: #f9f9f9;
+  }
+  .AmountContainer > input::placeholder{
+    font-size: 1rem;
+  }
+  .ExpireContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    height: 5.25rem;
+  }
+  .expireBox {
+    width: 14.6rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .expireBox > p {
+    color: #252b42;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.375rem; /* 122.222% */
+  }
+  .expireBox > input {
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+    background: #f9f9f9;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  .checkContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .drawerContainer > button {
+    width: 100%;
+    height: 3.25rem;
+    border-radius: 0.25rem;
+    background: var(--fixed-width-fixed-height-sec-, #2859b6);
+    color: var(--school-naturo, #fff);
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .paraContainer {
+    width: 29.68rem;
+    height: 4.125rem;
+    text-align: left;
+  }
+  .paraContainer > p {
+    color: var(--paragraph-sec-, #737373);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.375rem; /* 157.143% */
+  }
