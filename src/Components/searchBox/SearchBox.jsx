@@ -9,7 +9,7 @@ const SearchBox = ({ products }) => {
   const [suggestions, setSuggestions] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   
-  console.log("products", filteredItems);
+ 
 
   useEffect(() => {
     if (searchTerm) {
