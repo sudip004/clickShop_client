@@ -1,37 +1,63 @@
 /* SearchBox.css */
+
+/* Container adjustments for responsiveness */
 .search-container {
-    position: relative;
-    width: 300px;
-    margin: 0 auto;
+  position: relative;
+  width: 15rem; /* Changed from 300px to 90% for responsiveness */
+ /* Sets a maximum width */
+  margin: 0 auto;
+}
+
+/* Input field styling */
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding doesn't affect total width */
+}
+
+/* Suggestions list styling */
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  box-sizing: border-box; /* Ensures borders don't affect total width */
+}
+
+/* Individual suggestion item styling */
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Hover effect for suggestion items */
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 600px) {
+  .search-container {
+   margin-top: 20%;
+    width: 95%; /* Slightly wider on smaller screens */
   }
   
   .search-container input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .suggestions {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-top: none;
-    max-height: 150px;
-    overflow-y: auto;
-    background: #fff;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
+    padding: 8px; /* Reduced padding for smaller screens */
   }
   
   .suggestions li {
-    padding: 10px;
-    cursor: pointer;
+    padding: 8px; /* Reduced padding for suggestion items */
   }
-  
-  .suggestions li:hover {
-    background-color: #f0f0f0;
-  }
+}
+
   

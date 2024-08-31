@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "./assistent.css"
-import {io} from "socket.io-client"
 
-const socket = io('https://clickshop-server.onrender.com',)
 
 const Assistent = () => {
 
@@ -20,19 +18,41 @@ const Assistent = () => {
     const handleInputChange = (e) => {
       setInputValue(e.target.value);
     };
+
+    
+
   
     const handleSend = () => {
       if (inputValue.trim()) {
         const newMessage = inputValue;
         setMessages((prevMessages) => [...prevMessages, newMessage]);
         setInputValue('');
-        socket.emit('sendmessage', newMessage);
+
+        fetch(`${import.meta.env.VITE_BASE_URL}/messagesend`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: inputValue }),
+        }).then((res) => res.json()).then((data) => setMessages((prevMessages) => [...prevMessages, data.response]));
+
       }
     };
     const handleSuggestionClick = (suggestion) => {
         setMessages((prevMessages) => [...prevMessages, suggestion]);
-        socket.emit('message', suggestion);
+        
+
+        fetch(`${import.meta.env.VITE_BASE_URL}/message`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: suggestion }),
+        }).then((res) => res.json()).then((data) => setMessages((prevMessages) => [...prevMessages, data.response]));
       };
+
+
+
   
     useEffect(() => {
       setMessages((prevMessages) => [
@@ -40,16 +60,7 @@ const Assistent = () => {
         'Hi, how can I help you?',
       ]);
   
-      socket.on('response', (message) => {
-        setMessages((prevMessages) => [...prevMessages, message]);
-      });
-      socket.on('sendmessage', (message) => {
-        setMessages((prevMessages) => [...prevMessages, message]);
-      });
-  
-      return () => {
-        socket.disconnect();
-      };
+
     }, []);
 
 

@@ -14,7 +14,7 @@ const Product = () => {
   
   
   return (
-    <div>
+    <div >
       <Breadcrum product={product} />
       <ProductDisplay product={product}/>
       <DescriptionBox />
