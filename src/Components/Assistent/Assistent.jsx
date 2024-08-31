@@ -10,7 +10,7 @@ const Assistent = () => {
         'My payment is not going through',
         'Can I return a product?',
         'How do I track my order?',
-        'Product delevery is late',
+        'Product delivery is late',
       ]);
   
     console.log(messages);
