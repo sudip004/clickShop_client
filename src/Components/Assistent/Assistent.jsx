@@ -28,7 +28,7 @@ const Assistent = () => {
         setMessages((prevMessages) => [...prevMessages, newMessage]);
         setInputValue('');
 
-        fetch(`https://click-shop-server.vercel.app/messagesend`, {
+        fetch(`${import.meta.env.VITE_BASE_URL}/messagesend`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const Assistent = () => {
         setMessages((prevMessages) => [...prevMessages, suggestion]);
         
 
-        fetch(`https://click-shop-server.vercel.app/message`, {
+        fetch(`${import.meta.env.VITE_BASE_URL}/message`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
